@@ -1,0 +1,225 @@
+/* DoctorLogin.css - Enhanced for wider elements and better focus effects */
+.doctor-login-page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  padding: 2rem;
+}
+
+.doctor-login-container {
+  width: 100%;
+  max-width: 650px; /* Increased from 420px for wider container */
+  margin: auto;
+  padding: 2.5rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.doctor-login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.doctor-back-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.doctor-back-button:hover {
+  background-color: #f1f5f9;
+}
+
+.doctor-login-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.doctor-icon-wrapper {
+  width: 70px; /* Slightly increased */
+  height: 70px; /* Kept proportional */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3b82f6;
+  border-radius: 50%;
+}
+
+.doctor-icon {
+  width: 38px; /* Proportionally increased */
+  height: 38px;
+  color: white;
+}
+
+.doctor-login-logo h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.doctor-login-subtitle {
+  color: #64748b;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  max-width: 80%; /* Makes subtitle text take up less space horizontally */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.doctor-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%; /* Ensure form takes full container width */
+}
+
+.doctor-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%; /* Ensure input groups take full width */
+}
+
+.doctor-input-group label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.doctor-input-wrapper {
+  position: relative;
+  width: 100%; /* Ensure input wrapper takes full width */
+}
+
+.doctor-input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+}
+
+.doctor-input-wrapper input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease; /* Smoother transition for focus effect */
+}
+
+/* Enhanced focus effect with blue glow */
+.doctor-input-wrapper input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2); /* Stronger blue glow effect */
+}
+
+.doctor-password-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.doctor-forgot-password {
+  text-align: right;
+  font-size: 0.85rem;
+}
+
+.doctor-forgot-password a {
+  color: #64748b;
+  text-decoration: none;
+}
+
+.doctor-forgot-password a:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.doctor-login-button {
+  width: 100%; /* Ensure button takes full width */
+  padding: 0.75rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.doctor-login-button:hover {
+  background-color: #2563eb;
+}
+
+.doctor-login-button:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+.doctor-spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: doctor-spin 1s linear infinite;
+}
+
+@keyframes doctor-spin {
+  to { transform: rotate(360deg); }
+}
+
+.doctor-login-error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  width: 100%; /* Ensure error message takes full width */
+}
+
+.doctor-login-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 1.5rem;
+  width: 100%; /* Ensure footer takes full width */
+}
+
+.doctor-login-footer a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.doctor-login-footer a:hover {
+  text-decoration: underline;
+}

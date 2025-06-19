@@ -1,0 +1,382 @@
+/* DoctorApplication.css - Enhanced Version */
+.doctor-application-page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  padding: 1rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.doctor-application-container {
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
+  padding: 2.5rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.doctor-application-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.doctor-back-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctor-back-button:hover {
+  background-color: #f1f5f9;
+  color: #3b82f6;
+}
+
+.doctor-back-button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.doctor-application-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.doctor-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3b82f6;
+  border-radius: 50%;
+}
+
+.doctor-icon {
+  width: 38px;
+  height: 38px;
+  color: white;
+}
+
+.doctor-application-logo h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.doctor-application-subtitle {
+  color: #64748b;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.doctor-application-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.doctor-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.doctor-input-group label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.doctor-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.doctor-input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  z-index: 1;
+}
+
+.doctor-input-wrapper input,
+.doctor-input-wrapper select,
+.doctor-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  color: #334155;
+  background-color: #ffffff;
+}
+
+.doctor-input-wrapper input::placeholder,
+.doctor-textarea::placeholder {
+  color: #94a3b8;
+  opacity: 1;
+}
+
+.doctor-textarea {
+  padding: 0.75rem 1rem;
+  min-height: 100px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.doctor-input-wrapper input:focus,
+.doctor-input-wrapper select:focus,
+.doctor-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+}
+
+.doctor-input-wrapper select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  padding-right: 2rem;
+}
+
+.doctor-row {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.doctor-row .doctor-input-group {
+  flex: 1;
+}
+
+@media (max-width: 480px) {
+  .doctor-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.doctor-application-button {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.doctor-application-button:hover {
+  background-color: #2563eb;
+}
+
+.doctor-application-button:focus {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+.doctor-application-button:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+.doctor-spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: doctor-spin 1s linear infinite;
+}
+
+@keyframes doctor-spin {
+  to { transform: rotate(360deg); }
+}
+
+.doctor-application-error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.doctor-application-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 1.5rem;
+  width: 100%;
+  line-height: 1.6;
+}
+
+.doctor-application-footer a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.doctor-application-footer a:hover {
+  text-decoration: underline;
+  color: #2563eb;
+}
+
+.doctor-section-divider {
+  margin: 1rem 0;
+  font-weight: 600;
+  color: #334155;
+  font-size: 1.1rem;
+  position: relative;
+  text-align: center;
+}
+
+.doctor-section-divider::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #e2e8f0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.doctor-section-divider span {
+  background-color: white;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.doctor-checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.doctor-checkbox-label {
+  font-size: 0.95rem;
+  color: #334155;
+  cursor: pointer;
+}
+
+.doctor-checkbox-group input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.doctor-checkbox-group input[type="checkbox"]:checked {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.doctor-radio-group {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.25rem;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.radio-option input[type="radio"] {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+}
+
+.radio-option label {
+  cursor: pointer;
+}
+
+.success-container {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  color: #10b981;
+  margin-bottom: 1rem;
+}
+
+.success-message {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #334155;
+  font-size: 1.1rem;
+}
+
+.success-message h2 {
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+/* Date input customization */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.5);
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+/* Phone number input specific styling */
+.doctor-input-wrapper input[type="tel"] {
+  letter-spacing: 0.5px;
+}
